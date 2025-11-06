@@ -12,7 +12,6 @@ with open(output_file, "w") as f:
     for domain in domains:
         try:
             ip_addresses = socket.gethostbyname_ex(domain)[2]
-            f.write(f"# {domain}\n")
             for ip in ip_addresses:
                 f.write(f"{ip}\n")
             f.write("\n")
